@@ -8,9 +8,9 @@
 
 - [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/1)
 
-<!-- - [ci/cd](https://github.com/401-advanced-javascript-Dante/lab28/pull/2/checks?check_run_id=477304690) (GitHub Actions)
+- [ci/cd](https://github.com/401-advanced-javascript-Dante/lab31/actions/runs/48085952) (GitHub Actions)
 
-- [front-end application](https://401-advanced-javascript-dante.github.io/lab28/) (GitHub Pages) -->
+- [front-end application](https://401-advanced-javascript-dante.github.io/lab31/) (GitHub Pages)
 
 
 ### Setup
