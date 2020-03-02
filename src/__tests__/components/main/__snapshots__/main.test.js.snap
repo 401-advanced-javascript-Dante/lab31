@@ -2,52 +2,88 @@
 
 exports[`<Form /> Assert DOM stability via snapshot 1`] = `
 Array [
-  <p>
-    Selected REST: 
-    get
-  </p>,
-  <form
-    onSubmit={[Function]}
-  >
-    <input
-      name="address"
-      onChange={[Function]}
-      placeholder="type api address"
-      type="text"
-    />
-    <button
-      type="Submit"
-    >
-      Go
-    </button>
-  </form>,
   <div>
-    <button
-      id="get"
-      onClick={[Function]}
-      value="get"
+    <form
+      onSubmit={[Function]}
     >
-      Get
-    </button>
-    <button
-      id="post"
-      onClick={[Function]}
-      value="post"
-    >
-      Post
-    </button>
-    <button
-      onClick={[Function]}
-      value="put"
-    >
-      Put
-    </button>
-    <button
-      onClick={[Function]}
-      value="delete"
-    >
-      Delete
-    </button>
+      <label>
+        Name :
+        <input
+          name="name"
+        />
+      </label>
+      <br />
+      <label>
+        Note :
+        <textarea
+          name="note"
+        />
+      </label>
+      <br />
+      <label>
+        complete
+        <input
+          name="status"
+          type="radio"
+          value="complete"
+        />
+      </label>
+      <label>
+        Incomplete
+        <input
+          name="status"
+          type="radio"
+          value="Incomplete"
+        />
+      </label>
+      <br />
+      <label>
+        difficulty:
+        <select
+          name="difficulty"
+        >
+          <option
+            value="1"
+          >
+            1
+          </option>
+          <option
+            value="2"
+          >
+            2
+          </option>
+          <option
+            value="3"
+          >
+            3
+          </option>
+          <option
+            value="4"
+          >
+            4
+          </option>
+          <option
+            value="5"
+          >
+            5
+          </option>
+        </select>
+      </label>
+      <br />
+      <button
+        id="sub"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>,
+  <br />,
+  <div>
+    <h2>
+      ToDo List:
+    </h2>
+    <ul />
   </div>,
 ]
 `;
