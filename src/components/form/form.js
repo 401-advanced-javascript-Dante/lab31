@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {useState , useEffect} from 'react';
 
@@ -6,24 +7,44 @@ const Form = () => {
 
   const [noteBook , setNote] = useState({});
 
-
   let testFun = (e) => {
-    e.preventDefault();
+    e.preventDefault();    
     let name = e.target.name.value;
     let note = e.target.note.value;
     let status = e.target.status.value;
     let diff = e.target.difficulty.value;
     let id = Object.keys(noteBook).length.toString();
-
-    let newNote = noteBook ;
+    
+    let newNote = Object.assign({},noteBook);
     newNote[id] = {'name' : name , 'note': note , 'status':status , 'diff': diff};
-    console.log('after id', newNote);
-
+    
     setNote(newNote);
-
+    e.target.reset();
+    
     console.log('after setNote?', noteBook);
     console.log('keys' , Object.keys(noteBook));
   };
+
+  useEffect(()=>{
+    let id = Object.keys(noteBook).length.toString() ;
+
+    if(id > 0){
+      document.title = `${id} Todo left`;
+    }
+  });
+
+  let changeState = (id) =>{
+    id = id.toString();
+    let newNote = Object.assign({},noteBook);
+    if(newNote[id].status === 'complete'){
+      newNote[id].status = 'incomplete';
+    }else{
+      newNote[id].status = 'complete';
+    }
+
+    setNote(newNote);
+  };
+
 
   return(
     <>
@@ -48,8 +69,8 @@ const Form = () => {
           <label>complete
             <input type="radio" name="status" value="complete" />
           </label>
-          <label>In complete
-            <input type="radio" name="status" value="complete" />
+          <label>Incomplete
+            <input type="radio" name="status" value="Incomplete" />
           </label>
 
           <br/>
@@ -73,15 +94,19 @@ const Form = () => {
       <br/>
 
       <div>
-        <h2>Note List:</h2>
+        <h2>ToDo List:</h2>
         <ul>
           {/* <li>{noteBook}</li> */}
           
           {console.log('boook' , noteBook)}
           { 
-              Object.keys(noteBook).map((val, idx) => {
-              console.log('val',val);
-              return <li key={idx}> {noteBook[val].name} </li>;
+            Object.keys(noteBook).map((val, idx) => {
+              return<fieldset key={idx} onClick={()=> changeState(idx)} className={noteBook[val].status} > <legend>Name: {noteBook[val].name}</legend>
+                <p> ToDo: {noteBook[val].note} </p>
+                <li> Status: {noteBook[val].status} </li>
+                <li> Difficulty: {noteBook[val].diff} </li>
+                
+              </fieldset>;
             })}
 
 
