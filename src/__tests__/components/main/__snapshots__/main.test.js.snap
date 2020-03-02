@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> Assert DOM stability via snapshot 1`] = `
+Array [
+  <p>
+    Selected REST: 
+    get
+  </p>,
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="address"
+      onChange={[Function]}
+      placeholder="type api address"
+      type="text"
+    />
+    <button
+      type="Submit"
+    >
+      Go
+    </button>
+  </form>,
+  <div>
+    <button
+      id="get"
+      onClick={[Function]}
+      value="get"
+    >
+      Get
+    </button>
+    <button
+      id="post"
+      onClick={[Function]}
+      value="post"
+    >
+      Post
+    </button>
+    <button
+      onClick={[Function]}
+      value="put"
+    >
+      Put
+    </button>
+    <button
+      onClick={[Function]}
+      value="delete"
+    >
+      Delete
+    </button>
+  </div>,
+]
+`;
