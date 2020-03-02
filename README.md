@@ -1,15 +1,16 @@
-# LAB - Class 29 & 30
+# LAB - Class 31
 
-## Routing and Component Composition
+## Hooks API
 
 ### Author: Abdul-rhman Al-harasis 
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-Dante/lab28/pull/2)
-- [ci/cd](https://github.com/401-advanced-javascript-Dante/lab28/pull/2/checks?check_run_id=477304690) (GitHub Actions)
+- [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/1)
 
-- [front-end application](https://401-advanced-javascript-dante.github.io/lab28/) (GitHub Pages)
+<!-- - [ci/cd](https://github.com/401-advanced-javascript-Dante/lab28/pull/2/checks?check_run_id=477304690) (GitHub Actions)
+
+- [front-end application](https://401-advanced-javascript-dante.github.io/lab28/) (GitHub Pages) -->
 
 
 ### Setup
@@ -31,5 +32,5 @@ None
 #### UML
 
 Link to an image of the UML for your application and response to events
-- [uml](https://i.ibb.co/cyYtQTR/lab28.jpg)(UML)
+<!-- - [uml](https://i.ibb.co/cyYtQTR/lab28.jpg)(UML) -->
 
