@@ -141,7 +141,7 @@ const Form = () => {
         <ul>
           {/* <li>{noteBook}</li> */}
           
-          {console.log('boook' , noteBook, useDisplay.limit)}
+          {/* {console.log('boook' , noteBook, useDisplay.limit)} */}
           { 
             Object.keys(noteBook).map((val, idx) => {
               if( idx >= useDisplay.next && idx < useDisplay.limit){

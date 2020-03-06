@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/1)
+- [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/2)
 
 - [ci/cd](https://github.com/401-advanced-javascript-Dante/lab31/actions/runs/48085952) (GitHub Actions)
 
@@ -32,5 +32,5 @@ None
 #### UML
 
 Link to an image of the UML for your application and response to events
-<!-- - [uml](https://i.ibb.co/cyYtQTR/lab28.jpg)(UML) -->
+- [uml](https://i.ibb.co/y8KVcVW/DSC-0042.jpg)(UML)
 

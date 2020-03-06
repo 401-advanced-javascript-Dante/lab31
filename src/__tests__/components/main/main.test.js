@@ -9,11 +9,6 @@ import Form from '../../../components/form/form.js';
 
 describe('<Form />', () => {
 
-  let wrapper;
-  const setState = jest.fn();
-  const useStateSpy = jest.spyOn(React, 'useState')
-  useStateSpy.mockImplementation((init) => [init, setState]);
-
 
   it('already exist in our app' , () => {
     let test = shallow(<Form/>);
