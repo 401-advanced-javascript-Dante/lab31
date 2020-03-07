@@ -6,7 +6,10 @@ import React from 'react';
 import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
 import Form from './components/form/form.js';
+
+// Context 
 import Display from './context/display.js';
+import Logger from './context/logger.js';
 
 //style
 import './app.scss';
@@ -18,13 +21,15 @@ const App = ()=>{
 
   return(
     <>
-      <Header />
-      
-      <Display>
-        <Form />
-      </Display>
+      <Logger>
+        <Display>
 
-      <Footer />
+          <Header />
+          <Form />
+          <Footer />
+          
+        </Display>
+      </Logger>
     </>
   );
 };

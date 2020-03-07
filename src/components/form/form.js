@@ -2,12 +2,15 @@
 import React from 'react';
 import {useState , useEffect, useContext} from 'react';
 import {DisplayContext} from '../../context/display.js';
+import { LoggerContext } from '../../context/logger.js';
+
 
 
 const Form = () => {
 
   const [noteBook , setNote] = useState({});
   const useDisplay = useContext(DisplayContext);
+  const useLogger = useContext(LoggerContext);
 
   let testFun = (e) => {
     e.preventDefault();    
@@ -69,18 +72,19 @@ const Form = () => {
   }
 
 
+  if(useLogger.logState){
 
+  
+    return(
+      <>
+        {/* {console.log('test')} */}
+        <div>
 
-  return(
-    <>
-      {/* {console.log('test')} */}
-      <div>
+          <h2> Total: {useDisplay.viewNumber} -=- Show Per Page {useDisplay.inPage} </h2>
+          <button onClick={useDisplay.increaseSize}>+</button>
+          <button onClick={useDisplay.decreaseSize}>-</button> 
 
-        <h2> Total: {useDisplay.viewNumber} -=- Show Per Page {useDisplay.inPage} </h2>
-        <button onClick={useDisplay.increaseSize}>+</button>
-        <button onClick={useDisplay.decreaseSize}>-</button> 
-
-        {/* <DisplayContext.Consumer>
+          {/* <DisplayContext.Consumer>
           {
             DisplayContext => (
               // DisplayContext.changeViewNumber(Object.keys(noteBook).length)
@@ -91,81 +95,81 @@ const Form = () => {
 
 
 
-        <form onSubmit = {testFun}>
+          <form onSubmit = {testFun}>
 
-          <label>
+            <label>
         Name : 
-            <input name="name" />
-          </label>
+              <input name="name" />
+            </label>
 
-          <br/>
+            <br/>
 
-          <label>
+            <label>
         Note :
-            <textarea name="note"  />
-          </label>
+              <textarea name="note"  />
+            </label>
 
-          <br/>
+            <br/>
 
-          <label>complete
-            <input type="radio" name="status" value="complete" />
-          </label>
-          <label>Incomplete
-            <input type="radio" name="status" value="Incomplete" />
-          </label>
+            <label>complete
+              <input type="radio" name="status" value="complete" />
+            </label>
+            <label>Incomplete
+              <input type="radio" name="status" value="Incomplete" />
+            </label>
 
-          <br/>
+            <br/>
 
-          <label>difficulty:
-            <select name= "difficulty">
-              <option value ="1">1</option>
-              <option value ="2">2</option>
-              <option value ="3">3</option>
-              <option value ="4">4</option>
-              <option value ="5">5</option>
-            </select>
-          </label>
+            <label>difficulty:
+              <select name= "difficulty">
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+                <option value ="4">4</option>
+                <option value ="5">5</option>
+              </select>
+            </label>
 
-          <br/>
-          <button type="submit" id="sub">Submit</button>
+            <br/>
+            <button type="submit" id="sub">Submit</button>
 
-        </form>
-      </div>
+          </form>
+        </div>
 
-      <br/>
+        <br/>
 
-      <div>
-        <h2>ToDo List:</h2>
-        {preButton}{nextButton}
+        <div>
+          <h2>ToDo List:</h2>
+          {preButton}{nextButton}
 
-        <ul>
-          {/* <li>{noteBook}</li> */}
-          
-          {/* {console.log('boook' , noteBook, useDisplay.limit)} */}
-          { 
-            Object.keys(noteBook).map((val, idx) => {
-              if( idx >= useDisplay.next && idx < useDisplay.limit){
+          <ul>
+            { 
+              Object.keys(noteBook).map((val, idx) => {
+                if( idx >= useDisplay.next && idx < useDisplay.limit){
 
-                return<fieldset key={noteBook[val].id}> <legend>Name: {noteBook[val].name}</legend>
-                  <p> ToDo: {noteBook[val].note} </p>
-                  <li onClick={()=> changeState(idx)} className={noteBook[val].status} > Status: {noteBook[val].status} </li>
-                  <li> Difficulty: {noteBook[val].diff} </li>
-                  <button onClick={()=> deleteHandler(noteBook[val].id)} >DeleTe!</button>
+                  return<fieldset key={noteBook[val].id}> <legend>Name: {noteBook[val].name}</legend>
+                    <p> ToDo: {noteBook[val].note} </p>
+                    <li onClick={()=> changeState(idx)} className={noteBook[val].status} > Status: {noteBook[val].status} </li>
+                    <li> Difficulty: {noteBook[val].diff} </li>
+                    <button onClick={()=> deleteHandler(noteBook[val].id)} >DeleTe!</button>
                 
-                </fieldset>;
-              }
-            })}
+                  </fieldset>;
+                }
+              })}
 
 
 
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-    </>
+      </>
 
-  
-    
-  );
+    );
+
+  }else{
+    return null;
+  }
+
 };
 
 
