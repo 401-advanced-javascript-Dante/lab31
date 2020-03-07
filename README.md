@@ -1,12 +1,12 @@
-# LAB - Class 33
+# LAB - Class 34
 
-## Context API
+## <Login /> and <Auth />
 
 ### Author: Abdul-rhman Al-harasis 
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/2)
+- [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/3)
 
 - [ci/cd](https://github.com/401-advanced-javascript-Dante/lab31/actions/runs/48085952) (GitHub Actions)
 
@@ -32,5 +32,5 @@ None
 #### UML
 
 Link to an image of the UML for your application and response to events
-- [uml](https://i.ibb.co/y8KVcVW/DSC-0042.jpg)(UML)
+- [uml](https://i.ibb.co/bvRHzpt/lab34.jpg)(UML)
 
