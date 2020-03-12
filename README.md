@@ -1,1 +1,38 @@
-# lab31
+# LAB - Class 34
+
+## <Login /> and <Auth />
+
+### Author: Abdul-rhman Al-harasis 
+
+### Links and Resources
+
+- [submission PR](https://github.com/401-advanced-javascript-Dante/lab31/pull/3)
+
+- [ci/cd](https://github.com/401-advanced-javascript-Dante/lab31/actions/runs/48085952) (GitHub Actions)
+
+- [front-end application](https://401-advanced-javascript-dante.github.io/lab31/) (GitHub Pages)
+
+
+### Setup
+
+
+#### How to initialize/run your application (where applicable)
+
+- e.g. `npm start`
+- deployed server link `https://yalla-server401.herokuapp.com/`
+- user name : `dante` , password: `12345`
+
+#### Tests
+
+- How do you run tests?
+`npm test`
+- Any tests of note?
+`react-scripts test --env=jsdom`
+- Describe any tests that you did not complete, skipped, etc
+None
+
+#### UML
+
+Link to an image of the UML for your application and response to events
+- [uml](https://i.ibb.co/bvRHzpt/lab34.jpg)(UML)
+
