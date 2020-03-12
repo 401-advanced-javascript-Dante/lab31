@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 
 export const LoggerContext = React.createContext() ;
 
-const API = 'http://localhost:3333';
+const API = 'https://yalla-server401.herokuapp.com';
 const SECRET = 'Shushhhhh' ;
 
 
