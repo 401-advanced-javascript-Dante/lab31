@@ -19,6 +19,8 @@
 #### How to initialize/run your application (where applicable)
 
 - e.g. `npm start`
+- deployed server link `https://yalla-server401.herokuapp.com/`
+- user name : `dante` , password: `12345`
 
 #### Tests
 
